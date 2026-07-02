@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>My Computer - Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Baloo+2:wght@500;700&family=VT323&display=swap" rel="stylesheet">
 <style>
   * { box-sizing: border-box; user-select: none; }
   html, body {
@@ -46,7 +48,7 @@
     position: relative;
     width: 100vw; height: 100vh;
     background-color: #6b8cff;
-    background-image: url('media/gif_001_74c9ed5e71fdff37.gif');
+    background-image: url('media/mario-background.gif');
     background-repeat: repeat-x;
     background-position: left bottom;
     background-size: 1080px 324px;
@@ -196,6 +198,7 @@
     overflow: auto;
     background: #c0c0c0;
     padding: 10px;
+    position: relative;
   }
   .win-body.white {
     background: #fff;
@@ -219,6 +222,219 @@
   }
   .placeholder-box .big {
     font-size: 40px;
+  }
+
+  /* ---------- CONTACT ---------- */
+  .contact-card {
+    padding: 14px 10px;
+  }
+  .contact-table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 13px;
+  }
+  .contact-table td {
+    padding: 7px 8px;
+    border-bottom: 1px solid #d4d0c8;
+    vertical-align: middle;
+  }
+  .contact-table tr:last-child td {
+    border-bottom: none;
+  }
+  .contact-table td:first-child {
+    color: #444;
+    font-weight: bold;
+    white-space: nowrap;
+    width: 40%;
+  }
+  .contact-table a {
+    color: #0000EE;
+    text-decoration: underline;
+  }
+  .contact-table a:visited {
+    color: #0000EE;
+  }
+
+  /* ---------- RESUME (SNES MARIO KART HUD THEME) ---------- */
+  .resume-doc {
+    padding: 0 0 18px 0;
+    font-family: 'VT323', monospace;
+    font-size: 18px;
+    line-height: 1.35;
+    color: #1a1a1a;
+    background: linear-gradient(180deg, #5c94fc 0%, #5c94fc 70px, #7ec850 70px, #7ec850 100%);
+    min-height: 100%;
+  }
+  .mk-stripe {
+    height: 12px;
+    background-image: repeating-linear-gradient(-45deg, #e52521 0 10px, #fff 10px 20px);
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    image-rendering: pixelated;
+  }
+  .resume-download {
+    text-align: center;
+    padding: 12px 0 4px;
+  }
+  .resume-download a {
+    display: inline-block;
+    background: #fff;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 10px;
+    padding: 9px 14px;
+    border: 3px solid #000;
+    box-shadow: 4px 4px 0 #000;
+    letter-spacing: 0.5px;
+  }
+  .resume-download a:active {
+    box-shadow: 1px 1px 0 #000;
+    transform: translate(3px, 3px);
+  }
+  .resume-doc h1 {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 18px;
+    color: #fff;
+    -webkit-text-stroke: 1.5px #000;
+    text-shadow: 3px 3px 0 #000;
+    margin: 14px 0 8px 0;
+    text-align: center;
+    line-height: 1.6;
+    padding: 0 10px;
+  }
+  .resume-contact {
+    text-align: center;
+    font-family: 'VT323', monospace;
+    font-size: 16px;
+    font-weight: bold;
+    color: #1a1a1a;
+    background: #fff;
+    border: 3px solid #000;
+    border-radius: 10px;
+    margin: 0 16px 4px;
+    padding: 5px 8px;
+  }
+  .resume-doc h2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 11px;
+    color: #1a1a1a;
+    background: #fbd000;
+    border: 3px solid #000;
+    border-radius: 10px;
+    padding: 8px 14px;
+    margin: 22px 16px 12px;
+    box-shadow: 3px 3px 0 rgba(0,0,0,0.35);
+    letter-spacing: 0.5px;
+  }
+  .resume-doc > h2:first-of-type {
+    margin-top: 8px;
+  }
+  .mk-flag-icon {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fbd000;
+    border: 2px solid #000;
+    display: inline-block;
+  }
+  .mk-trophy-icon {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fbd000;
+    border: 2px solid #000;
+  }
+  .mk-item-icon {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    background: #fbd000;
+    border: 2px solid #000;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 9px;
+    color: #1a1a1a;
+  }
+  .resume-entry {
+    margin: 0 16px 14px 16px;
+    border: 3px solid #000;
+    border-radius: 10px;
+    box-shadow: 3px 3px 0 rgba(0,0,0,0.35);
+    background: #fffdf3;
+    padding: 10px 12px;
+    color: #1a1a1a;
+  }
+  .race-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 8px;
+    color: #1a1a1a;
+    background: #fbd000;
+    border: 2px solid #000;
+    border-radius: 12px;
+    padding: 3px 8px 3px 4px;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+  }
+  .race-tag .mk-flag-icon {
+    width: 12px;
+    height: 12px;
+  }
+  .job-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #d3242c;
+    line-height: 1.2;
+  }
+  .job-role {
+    font-size: 16px;
+    color: #1a1a1a;
+    margin-top: 1px;
+  }
+  .job-meta {
+    font-size: 13px;
+    color: #666;
+    margin-top: 2px;
+    margin-bottom: 4px;
+  }
+  .resume-doc ul {
+    margin: 6px 0 0 0;
+    padding-left: 0;
+    list-style: none;
+  }
+  .resume-doc li {
+    margin-bottom: 4px;
+    padding-left: 18px;
+    position: relative;
+    color: #1a1a1a;
+  }
+  .resume-doc li::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    background: #d3242c;
+    border: 1px solid #000;
+    border-radius: 50%;
+  }
+  .resume-skills-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 6px;
   }
 
   /* ---------- GALLERY ---------- */
@@ -346,6 +562,69 @@
     color: #fff;
     font-size: 11px;
     padding: 3px 6px;
+  }
+
+  /* ---------- BLURB TOGGLE / PANEL ---------- */
+  .blurb-animating {
+    transition: height 0.25s ease;
+  }
+  .blurb-bar {
+    display: flex;
+    align-items: center;
+    padding: 4px 6px;
+    background: #c0c0c0;
+    box-shadow: inset 0 1px 0 #fff;
+    flex-shrink: 0;
+  }
+  .blurb-bar.align-right {
+    justify-content: flex-end;
+  }
+  .blurb-toggle {
+    background: #c0c0c0;
+    color: #000;
+    border: none;
+    box-shadow: inset -1px -1px 0 #000, inset 1px 1px 0 #fff;
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+    font-size: 11px;
+    padding: 3px 8px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .blurb-toggle:active {
+    box-shadow: inset 1px 1px 0 #000, inset -1px -1px 0 #fff;
+  }
+  .blurb-panel {
+    box-sizing: border-box;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.25s ease;
+    background: #ffffe1;
+    color: #000;
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 0 10px;
+    box-shadow: inset 0 1px 0 #808080;
+    flex-shrink: 0;
+  }
+  .blurb-panel.open {
+    padding: 8px 10px;
+  }
+  .blurb-panel p {
+    margin: 0 0 4px 0;
+  }
+  .blurb-panel p:last-child {
+    margin-bottom: 0;
+  }
+
+  #desktopMusicPlayer .blurb-bar {
+    padding: 2px 4px 4px 4px;
+    background: transparent;
+    box-shadow: none;
+  }
+  #desktopMusicPlayer .blurb-panel.open {
+    max-height: 70px;
   }
 
 
@@ -621,7 +900,7 @@
     right: 8px;
     bottom: 34px;
     width: 390px;
-    height: 108px;
+    height: 132px;
     background: #c0c0c0;
     border: 2px solid #c0c0c0;
     box-shadow:
@@ -773,7 +1052,7 @@
       <div class="vid-arrow right" id="vidNext">›</div>
       <div class="vid-controls" id="vidControls">
         <button id="vidBack5" title="Back 5 seconds">« 5s</button>
-        <button id="vidPlayPause" title="Play/Pause">Pause</button>
+        <button id="vidPlayPause" title="Play/Pause">⏸</button>
         <button id="vidForward5" title="Forward 5 seconds">5s »</button>
         <input id="vidSeek" type="range" min="0" max="100" value="0" step="0.1" title="Playback position">
         <span class="vid-time" id="vidTime">0:00 / 0:00</span>
@@ -783,6 +1062,12 @@
         </div>
       </div>
       <div class="vid-caption" id="vidCaption">Placeholder reel 1 of 3 — swap in real clips anytime</div>
+    </div>
+    <div class="blurb-bar">
+      <button class="blurb-toggle" id="vidBlurbToggle" type="button">Open Blurb</button>
+    </div>
+    <div class="blurb-panel" id="vidBlurbPanel">
+      <p id="vidBlurbText">Add two sentences about this clip here.</p>
     </div>
     <div class="resize-handle tl" data-resize="tl" title="Drag to resize"></div>
     <div class="resize-handle tr" data-resize="tr" title="Drag to resize"></div>
@@ -805,6 +1090,12 @@
       <div class="vid-arrow right" id="longVidNext">›</div>
       <div class="vid-caption" id="longVidCaption">Long video 1 of 3</div>
     </div>
+    <div class="blurb-bar">
+      <button class="blurb-toggle" id="longVidBlurbToggle" type="button">Open Blurb</button>
+    </div>
+    <div class="blurb-panel" id="longVidBlurbPanel">
+      <p id="longVidBlurbText">Add two sentences about this video here.</p>
+    </div>
     <div class="resize-handle tl" data-resize="tl" title="Drag to resize"></div>
     <div class="resize-handle tr" data-resize="tr" title="Drag to resize"></div>
     <div class="resize-handle bl" data-resize="bl" title="Drag to resize"></div>
@@ -814,11 +1105,17 @@
 
   <div id="desktopMusicPlayer">
     <audio id="desktopMusicAudio" preload="metadata"></audio>
+    <div class="blurb-bar">
+      <button class="blurb-toggle" id="musicBlurbToggle" type="button">Open Blurb</button>
+    </div>
+    <div class="blurb-panel" id="musicBlurbPanel">
+      <p id="musicBlurbText">Add two sentences about this track here.</p>
+    </div>
     <div id="desktopMusicTitle">LIFETIMES — ENRICO MIX 1</div>
     <div id="desktopMusicControls">
       <button id="desktopMusicPrev" type="button" title="Previous song">|◀</button>
       <button id="desktopMusicBack" type="button" title="Rewind 5 seconds">« 5s</button>
-      <button id="desktopMusicPlay" type="button" title="Play / pause">Play</button>
+      <button id="desktopMusicPlay" type="button" title="Play / pause">▶</button>
       <button id="desktopMusicForward" type="button" title="Forward 5 seconds">5s »</button>
       <button id="desktopMusicNext" type="button" title="Next song">▶|</button>
       <span id="desktopMusicTime">0:00 / 0:00</span>
@@ -843,49 +1140,48 @@
 
 <script>
 const designWorkImages = [
-  { src: 'media/jpg_001_6750893327344677.jpg', cap: 'Design piece 1' },
-  { src: 'media/jpg_002_2680f1dbbc73c364.jpg', cap: 'Design piece 2' },
-  { src: 'media/jpg_003_e0c3b82b18d6e134.jpg', cap: 'Design piece 3' },
-  { src: 'media/jpg_004_80b62662613c4848.jpg', cap: 'Design piece 4' },
-  { src: 'media/jpg_005_5be1d8192bf73302.jpg', cap: 'Design piece 5' },
-  { src: 'media/jpg_006_c1b600c3e52621d3.jpg', cap: 'Design piece 6' },
-  { src: 'media/jpg_007_b1dda7397dcf1698.jpg', cap: 'Design piece 7' },
-  { src: 'media/jpg_008_8ba945cf8e59f0d7.jpg', cap: 'Design piece 8' },
-  { src: 'media/jpg_009_909e3c948ae07eb7.jpg', cap: 'Design piece 9' },
-  { src: 'media/jpg_010_b8cfade0fd265215.jpg', cap: 'Design piece 10' },
-  { src: 'media/jpg_011_499d180e3097496e.jpg', cap: 'Design piece 11' },
-  { src: 'media/jpg_012_d1a5a0138b39c3a2.jpg', cap: 'Design piece 12' },
+  { src: 'media/design-piece-1.jpg', cap: 'Cactus 1', blurb: '' },
+  { src: 'media/design-piece-2.jpg', cap: 'Cactus 2', blurb: '' },
+  { src: 'media/design-piece-3.jpg', cap: 'Cactus 3', blurb: '' },
+  { src: 'media/design-piece-4.jpg', cap: 'Cactus 4', blurb: '' },
+  { src: 'media/design-piece-5.jpg', cap: 'Cactus 5', blurb: '' },
+  { src: 'media/design-piece-6.jpg', cap: 'Cactus 6', blurb: '' },
+  { src: 'media/design-piece-7.jpg', cap: 'Cactus 7', blurb: '' },
+  { src: 'media/design-piece-8.jpg', cap: 'Cactus 8', blurb: '' },
+  { src: 'media/design-piece-9.jpg', cap: 'Cactus 9', blurb: '' },
+  { src: 'media/design-piece-10.jpg', cap: 'Cactus 10', blurb: '' },
+  { src: 'media/design-piece-11.jpg', cap: 'Cactus 11', blurb: '' },
+  { src: 'media/design-piece-12.jpg', cap: 'Cactus 12', blurb: '' },
 ];
 
-const folderIconDataUri = 'media/gif_002_715ab6c8a05e358c.gif';
+const folderIconDataUri = 'media/mario-block-folder-icon.gif';
 
 const folders = [
   { id: 'videos',   label: 'Videos',          glyph: '🎬', type: 'video' },
   { id: 'longvideos', label: 'Long Videos',   glyph: '🎬', type: 'longvideo' },
   { id: 'design',   label: 'Design Work',     glyph: '📁', type: 'gallery' },
-  { id: 'code',     label: 'Code Projects',   glyph: '📁', type: 'placeholder' },
   { id: 'about',    label: 'About Me',        glyph: '📁', type: 'placeholder' },
   { id: 'resume',   label: 'Resume',           glyph: '📁', type: 'placeholder' },
   { id: 'contact',  label: 'Contact',          glyph: '📁', type: 'placeholder' },
 ];
 
-designWorkImages.push({ src: 'media/jpg_013_bcebbb3be705e26a.jpg', cap: 'Firewood Blue Angel' });
-designWorkImages.push({ src: 'media/jpg_014_799af9a36aedf392.jpg', cap: 'Grey Angel' });
-designWorkImages.push({ src: 'media/jpg_015_c490b3ceddf26586.jpg', cap: 'Pink Angel' });
-designWorkImages.push({ src: 'media/jpg_016_5024a65f9330c1fc.jpg', cap: '06.24.26 Angel Cover' });
-designWorkImages.push({ src: 'media/jpg_017_cbea6d2ab3d1c2ff.jpg', cap: 'First Album Cover' });
+designWorkImages.push({ src: 'media/firewood-blue-angel.jpg', cap: 'Firewood Blue Angel', blurb: '' });
+designWorkImages.push({ src: 'media/grey-angel.jpg', cap: 'Grey Angel', blurb: '' });
+designWorkImages.push({ src: 'media/pink-angel.jpg', cap: 'Pink Angel', blurb: '' });
+designWorkImages.push({ src: 'media/06-24-26-angel-cover.jpg', cap: 'Shaded Blue Angel', blurb: '' });
+designWorkImages.push({ src: 'media/first-album-cover.jpg', cap: 'Blue Angel', blurb: '' });
 
 const videoPlaylist = [
-  { src: 'media/mp4_001_a2e994b6c2c5bc8e.mp4', caption: 'Key Found — Concert 1' },
-  { src: 'media/mp4_002_3be1e17670f486b7.mp4', caption: 'Final Draft' },
-  { src: 'media/mp4_003_035cfd6e25fe9b04.mp4', caption: 'Emerald Session 1' },
+  { src: 'media/key-found-concert-1.mp4', caption: "Key Found 'Helpit' Edit", blurb: '' },
+  { src: 'media/final-draft.mp4', caption: "Key Found 'Radium Girl' Promo Video", blurb: '' },
+  { src: 'media/emerald-session-1.mp4', caption: 'Key Found Emerald Session Promo Video', blurb: '' },
 ];
-videoPlaylist.unshift({ src: 'media/mp4_004_4d33424f643067d0.mp4', caption: 'MK Final Video' });
+videoPlaylist.unshift({ src: 'media/mk-final-video.mp4', caption: "Michael Kameron 'The Mask' Edit", blurb: '' });
 
 const longVideoPlaylist = [
-  { youtubeId: 'fK2nvMEHlxU', caption: 'Enrico Emerald Session' },
-  { youtubeId: 'VbK4aqu4Wtw', caption: 'Zen Studios Emerald Session' },
-  { youtubeId: 'vJ72k9aYju4', caption: 'Key Found Emerald Session' },
+  { youtubeId: 'fK2nvMEHlxU', caption: 'Enrico Emerald Session', blurb: '' },
+  { youtubeId: 'VbK4aqu4Wtw', caption: 'Zen Studios Emerald Session', blurb: '' },
+  { youtubeId: 'vJ72k9aYju4', caption: 'Key Found Emerald Session', blurb: '' },
 ];
 let longVidIndex = 0;
 
@@ -1123,7 +1419,7 @@ function toggleMaximize(win) {
   bringToFront(win);
 }
 
-function createWindow({ id, title, glyph, width, height, left, top, bodyHTML, statusText }) {
+function createWindow({ id, title, glyph, width, height, left, top, bodyHTML, statusText, blurbText }) {
   if (openWindows[id]) {
     openWindows[id].classList.remove('hidden');
     bringToFront(openWindows[id]);
@@ -1136,6 +1432,14 @@ function createWindow({ id, title, glyph, width, height, left, top, bodyHTML, st
   win.style.height = (height || 280) + 'px';
   win.style.left = (left != null ? left : 120) + 'px';
   win.style.top = (top != null ? top : 80) + 'px';
+  const blurbBarHTML = blurbText != null ? `
+    <div class="blurb-bar">
+      <button class="blurb-toggle" type="button">Open Blurb</button>
+    </div>
+    <div class="blurb-panel">
+      <p>${blurbText}</p>
+    </div>
+  ` : '';
   win.innerHTML = `
     <div class="titlebar">
       <div class="title"><span>${glyph}</span><span>${title}</span></div>
@@ -1147,6 +1451,7 @@ function createWindow({ id, title, glyph, width, height, left, top, bodyHTML, st
     </div>
     <div class="win-body white">${bodyHTML}</div>
     <div class="win-status">${statusText || ''}</div>
+    ${blurbBarHTML}
     <div class="resize-handle tl" data-resize="tl" title="Drag to resize"></div>
     <div class="resize-handle tr" data-resize="tr" title="Drag to resize"></div>
     <div class="resize-handle bl" data-resize="bl" title="Drag to resize"></div>
@@ -1169,10 +1474,59 @@ function createWindow({ id, title, glyph, width, height, left, top, bodyHTML, st
   });
   win.addEventListener('mousedown', () => bringToFront(win));
 
+  if (blurbText != null) {
+    setupBlurbToggle(win.querySelector('.blurb-toggle'), win.querySelector('.blurb-panel'), win, win.querySelector('.win-body'));
+  }
+
   openWindows[id] = win;
   addTaskbarItem(id, title);
   bringToFront(win);
   return win;
+}
+
+function setupBlurbToggle(toggleBtn, panel, growEl, bodyEl) {
+  let open = false;
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    open = !open;
+    toggleBtn.classList.toggle('open', open);
+    toggleBtn.textContent = open ? 'Close Blurb' : 'Open Blurb';
+
+    if (bodyEl) {
+      // Pin the content area to its exact current pixel height so it can't
+      // stretch or shrink while the window resizes, then release the pin
+      // afterward so manual window resizing still works normally.
+      bodyEl.style.flex = '0 0 ' + bodyEl.offsetHeight + 'px';
+    }
+    if (growEl) growEl.classList.add('blurb-animating');
+
+    if (open) {
+      panel.classList.add('open');
+      panel.style.maxHeight = 'none';
+      const target = panel.scrollHeight;
+      panel.style.maxHeight = '0px';
+      void panel.offsetHeight; // force reflow so the transition starts from 0
+      panel.style.maxHeight = target + 'px';
+      panel.dataset.lastHeight = target;
+      if (growEl) {
+        const current = parseFloat(growEl.style.height) || growEl.offsetHeight;
+        growEl.style.height = (current + target) + 'px';
+      }
+    } else {
+      const target = Number(panel.dataset.lastHeight) || panel.scrollHeight;
+      panel.style.maxHeight = '0px';
+      panel.classList.remove('open');
+      if (growEl) {
+        const current = parseFloat(growEl.style.height) || growEl.offsetHeight;
+        growEl.style.height = (current - target) + 'px';
+      }
+    }
+
+    setTimeout(() => {
+      if (growEl) growEl.classList.remove('blurb-animating');
+      if (bodyEl) bodyEl.style.flex = '';
+    }, 300);
+  });
 }
 
 function openImageViewer(index) {
@@ -1190,7 +1544,8 @@ function openImageViewer(index) {
         <img src="${img.src}" style="max-width:100%; max-height:100%; object-fit:contain;">
       </div>
     `,
-    statusText: img.cap
+    statusText: img.cap,
+    blurbText: img.blurb || `Add two sentences about "${img.cap}" here.`
   });
 }
 
@@ -1225,6 +1580,139 @@ function openFolder(f) {
       bodyHTML: `<div class="gallery">${items}</div>`,
       statusText: `${designWorkImages.length} object(s) — double-click not needed, single click to view`
     });
+  } else if (f.id === 'resume') {
+    createWindow({
+      id: f.id,
+      title: f.label,
+      glyph: '📁',
+      width: 560,
+      height: 560,
+      left: 140 + Math.random() * 60,
+      top: 50 + Math.random() * 40,
+      bodyHTML: `
+        <div class="resume-doc">
+          <div class="mk-stripe"></div>
+          <h1>RAFAEL LUTTMANN</h1>
+          <div class="resume-download">
+            <a href="media/rafael-luttmann-resume.pdf" target="_blank" rel="noopener">Download PDF</a>
+          </div>
+          <div class="resume-contact">New York City, NY / Boston, MA &nbsp;|&nbsp; rafael.luttmann@gmail.com &nbsp;|&nbsp; (917) 742-6570</div>
+
+          <h2><span class="mk-flag-icon"></span>Driver License</h2>
+          <div class="resume-entry">
+            <div class="job-title">Northeastern University</div>
+            <div class="job-role">Candidate for B.S. in Mathematics — GPA: 3.7</div>
+            <div class="job-meta">Boston, MA — Class of 2028</div>
+            <div>Involvement: Green Line Records</div>
+          </div>
+
+          <h2><span class="mk-flag-icon"></span>Race Results</h2>
+          <div class="resume-entry"><div class="race-tag"><span class="mk-flag-icon"></span>RACE COMPLETE</div>
+            <div class="job-title">Wayfair</div>
+            <div class="job-role">Brand Marketing and Events Co-op</div>
+            <div class="job-meta">Boston, MA — Jan–Jun 2026</div>
+            <ul>
+              <li>Coordinated event logistics, swag, and pre-event presentations while tracking budgets</li>
+              <li>Supported graphic design for Wayfair's Tastemaker program</li>
+            </ul>
+          </div>
+          <div class="resume-entry"><div class="race-tag"><span class="mk-flag-icon"></span>RACE COMPLETE</div>
+            <div class="job-title">Green Line Records</div>
+            <div class="job-role">Head of Creative Services</div>
+            <div class="job-meta">Boston, MA — Oct 2025–Present</div>
+            <ul>
+              <li>Lead video content creation and visual asset development for signed artists</li>
+              <li>Manage the @greenlinerecords social media pages</li>
+            </ul>
+          </div>
+          <div class="resume-entry"><div class="race-tag"><span class="mk-flag-icon"></span>RACE COMPLETE</div>
+            <div class="job-title">Enrico</div>
+            <div class="job-role">Content Manager</div>
+            <div class="job-meta">Boston, MA — Mar 2026–Present</div>
+            <ul>
+              <li>Built Enrico's visual brand, translating his music's tone into social direction</li>
+              <li>Filmed, edited, and scheduled content to grow audience engagement</li>
+            </ul>
+          </div>
+          <div class="resume-entry"><div class="race-tag"><span class="mk-flag-icon"></span>RACE COMPLETE</div>
+            <div class="job-title">Nas Nuvens Music Group</div>
+            <div class="job-role">Finance Sector Intern</div>
+            <div class="job-meta">São Paulo, Brazil — Jul–Aug 2025</div>
+            <ul>
+              <li>Automated Excel databases for full-catalog financial analysis using AI tools</li>
+              <li>Supported COO on investment analysis and artist-contract presentations</li>
+              <li>Presented financial findings in companywide meetings</li>
+            </ul>
+          </div>
+          <div class="resume-entry"><div class="race-tag"><span class="mk-flag-icon"></span>RACE COMPLETE</div>
+            <div class="job-title">Amazon Audible</div>
+            <div class="job-role">Marketing Representative</div>
+            <div class="job-meta">Paraty–Rio de Janeiro, Brazil — Aug 2025</div>
+            <ul>
+              <li>Promoted Audible at FLIP Literary Festival via attendee engagement and trial giveaways</li>
+            </ul>
+          </div>
+          <div class="resume-entry"><div class="race-tag"><span class="mk-flag-icon"></span>RACE COMPLETE</div>
+            <div class="job-title">Developing Minds Foundation</div>
+            <div class="job-role">Fundraiser Intern, City of God Project</div>
+            <div class="job-meta">Rio de Janeiro, Brazil — Summer 2023</div>
+            <ul>
+              <li>Led a fundraising campaign for a computer lab, targeting $10,000</li>
+              <li>Created content from a two-week immersion to drive donor engagement</li>
+              <li>Raised $95,000 total, including a $30,000/year corporate grant</li>
+            </ul>
+          </div>
+          <div class="resume-entry"><div class="race-tag"><span class="mk-flag-icon"></span>RACE COMPLETE</div>
+            <div class="job-title">Tortoise and Volt Marketing & Ventures</div>
+            <div class="job-role">Content Creator</div>
+            <div class="job-meta">New York, NY — Summer 2024</div>
+            <ul>
+              <li>Directed and edited investor-outreach videos for 3 brands</li>
+              <li>Filmed a Tequila production video on-site in Mexico for a fundraising campaign</li>
+            </ul>
+          </div>
+          <div class="resume-entry"><div class="race-tag"><span class="mk-flag-icon"></span>RACE COMPLETE</div>
+            <div class="job-title">The Herc NYC</div>
+            <div class="job-role">Brand Associate</div>
+            <div class="job-meta">New York, NY — Summer 2024</div>
+            <ul>
+              <li>Built out the bar experience end-to-end, from design to installation</li>
+              <li>Produced social content for @herculesmulligancompany and managed merchandising</li>
+            </ul>
+          </div>
+
+          <h2><span class="mk-item-icon">?</span>Item Box</h2>
+          <div class="resume-entry">
+            <div><strong>Language:</strong> English, Portuguese</div>
+            <div><strong>Video &amp; Photo:</strong> Premiere Pro, After Effects, Photoshop, Canva</div>
+            <div><strong>Computer:</strong> Google Suite, Microsoft Office Suite</div>
+          </div>
+          <div class="mk-stripe" style="margin-top:16px;"></div>
+        </div>
+      `,
+      statusText: 'Resume'
+    });
+  } else if (f.id === 'contact') {
+    createWindow({
+      id: f.id,
+      title: f.label,
+      glyph: '📁',
+      width: 420,
+      height: 300,
+      left: 160 + Math.random() * 60,
+      top: 90 + Math.random() * 40,
+      bodyHTML: `
+        <div class="contact-card">
+          <table class="contact-table">
+            <tr><td>Personal email</td><td><a href="mailto:rafael.luttmann@gmail.com">rafael.luttmann@gmail.com</a></td></tr>
+            <tr><td>School email</td><td><a href="mailto:luttmann.r@northeastern.edu">luttmann.r@northeastern.edu</a></td></tr>
+            <tr><td>Phone</td><td><a href="tel:+19177426570">917-742-6570</a></td></tr>
+            <tr><td>Instagram</td><td><a href="https://instagram.com/rafadinho.11" target="_blank" rel="noopener">@rafadinho.11</a></td></tr>
+          </table>
+        </div>
+      `,
+      statusText: 'Contact'
+    });
   } else {
     createWindow({
       id: f.id,
@@ -1246,7 +1734,8 @@ function openFolder(f) {
   }
 }
 
-/* ---------------- VIDEO WINDOW WIRING ---------------- */
+/* ---------------- GAMES ---------------- */
+
 const videoWinEl = document.getElementById('videoWin');
 const vidEl = document.getElementById('vidEl');
 vidEl.muted = true;
@@ -1258,6 +1747,7 @@ addTaskbarItem('video', 'Now Playing.avi');
 makeDraggable(videoWinEl, videoWinEl.querySelector('.titlebar'));
 makeResizable(videoWinEl);
 videoWinEl.addEventListener('mousedown', () => bringToFront(videoWinEl));
+setupBlurbToggle(document.getElementById('vidBlurbToggle'), document.getElementById('vidBlurbPanel'), videoWinEl, videoWinEl.querySelector('.win-body'));
 
 function dataURLToBlobURL(dataURL) {
   const commaIdx = dataURL.indexOf(',');
@@ -1298,12 +1788,17 @@ const longVidCaptionEl = document.getElementById('longVidCaption');
 makeDraggable(longVideoWinEl, longVideoWinEl.querySelector('.titlebar'));
 makeResizable(longVideoWinEl);
 longVideoWinEl.addEventListener('mousedown', () => bringToFront(longVideoWinEl));
+setupBlurbToggle(document.getElementById('longVidBlurbToggle'), document.getElementById('longVidBlurbPanel'), longVideoWinEl, longVideoWinEl.querySelector('.win-body'));
 
 function loadLongVideo(i) {
   longVidIndex = (i + longVideoPlaylist.length) % longVideoPlaylist.length;
   const v = longVideoPlaylist[longVidIndex];
   longYtFrameEl.src = `https://www.youtube.com/embed/${v.youtubeId}?autoplay=1&rel=0&modestbranding=1`;
   longVidCaptionEl.textContent = `${v.caption} — ${longVidIndex + 1} of ${longVideoPlaylist.length}`;
+  const longVidBlurbTextEl = document.getElementById('longVidBlurbText');
+  if (longVidBlurbTextEl) {
+    longVidBlurbTextEl.textContent = v.blurb || `Add two sentences about "${v.caption}" here.`;
+  }
 }
 
 function openLongVideosWindow() {
@@ -1346,7 +1841,7 @@ function syncVideoControls() {
   vidSeekEl.max = duration || 100;
   vidSeekEl.value = vidEl.currentTime || 0;
   vidTimeEl.textContent = `${formatTime(vidEl.currentTime)} / ${formatTime(duration)}`;
-  vidPlayPauseBtn.textContent = vidEl.paused ? 'Play' : 'Pause';
+  vidPlayPauseBtn.textContent = vidEl.paused ? '▶' : '⏸';
   if (vidMuteBtn) vidMuteBtn.textContent = vidEl.muted || vidEl.volume === 0 ? '🔇' : '🔊';
 }
 
@@ -1375,6 +1870,10 @@ function loadVideo(i) {
     syncVideoControls();
   }
   vidCaption.textContent = `${v.caption} — ${vidIndex + 1} of ${videoPlaylist.length}`;
+  const vidBlurbTextEl = document.getElementById('vidBlurbText');
+  if (vidBlurbTextEl) {
+    vidBlurbTextEl.textContent = v.blurb || `Add two sentences about "${v.caption}" here.`;
+  }
 }
 
 loadVideo(0);
@@ -1452,7 +1951,7 @@ bringToFront(videoWinEl);
 
 
 /* ---------------- MUSIC PLAYER WINDOW ---------------- */
-const EMBEDDED_TRACK_SRC = 'media/mp3_001_c1f81e85ee4d3f26.mp3';
+const EMBEDDED_TRACK_SRC = 'media/lifetimes-enrico-mix-1.mp3';
 const musicPlaylist = [
   { title: 'LIFETIMES', artist: 'ENRICO MIX 1', src: EMBEDDED_TRACK_SRC }
 ];
@@ -1465,7 +1964,7 @@ function openMusicWindow() {
   const playlistHTML = musicPlaylist.map((song, i) => `
     <div class="music-track" data-track="${i}">
       <span>${i + 1}. ${song.title}</span>
-      <button data-track-play="${i}">Play</button>
+      <button data-track-play="${i}">▶</button>
     </div>
   `).join('');
 
@@ -1487,7 +1986,7 @@ function openMusicWindow() {
         <div class="music-controls">
           <button id="musicPrev" title="Previous track">|◀</button>
           <button id="musicBack5" title="Back 5 seconds">« 5s</button>
-          <button id="musicPlayPause" title="Play/Pause">Play</button>
+          <button id="musicPlayPause" title="Play/Pause">▶</button>
           <button id="musicForward5" title="Forward 5 seconds">5s »</button>
           <button id="musicNext" title="Next track">▶|</button>
         </div>
@@ -1629,7 +2128,7 @@ function updateMusicUI() {
   if (status && !musicAudio.error) {
     status.textContent = musicAudio.paused ? 'Stopped / Paused' : 'Playing';
   }
-  if (playPause) playPause.textContent = musicAudio.paused ? 'Play' : 'Pause';
+  if (playPause) playPause.textContent = musicAudio.paused ? '▶' : '⏸';
 
   const duration = musicAudio.duration || 0;
   if (seek) {
@@ -1736,7 +2235,7 @@ document.getElementById('startBtn').addEventListener('click', () => {
 
     function updatePlayButton() {
       if (!playPause) return;
-      playPause.textContent = audio.paused ? "Play" : "Pause";
+      playPause.textContent = audio.paused ? "▶" : "⏸";
     }
 
     function updateTime() {
@@ -1902,6 +2401,8 @@ document.getElementById('startBtn').addEventListener('click', () => {
 
     if (!player || !audio) return;
 
+    setupBlurbToggle(document.getElementById('musicBlurbToggle'), document.getElementById('musicBlurbPanel'), player);
+
     audio.volume = volume ? Number(volume.value) : 0.8;
 
     function loadTrack(i) {
@@ -1917,7 +2418,7 @@ document.getElementById('startBtn').addEventListener('click', () => {
       seek.max = duration;
       seek.value = Number.isFinite(audio.currentTime) ? audio.currentTime : 0;
       time.textContent = fmt(audio.currentTime) + " / " + fmt(duration);
-      play.textContent = audio.paused ? "Play" : "Pause";
+      play.textContent = audio.paused ? "▶" : "⏸";
       if (mute) mute.textContent = audio.muted || audio.volume === 0 ? "🔇" : "🔊";
     }
 
